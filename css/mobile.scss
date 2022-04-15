@@ -1,0 +1,230 @@
+/* fallback */
+@font-face {
+  font-family: Roboto;
+  src: url("circe.otf");
+}
+body
+{
+  margin: 0px;
+  padding: 0px;
+}
+*
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 29px;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Roboto,sans-serif;
+}
+*::scrollbar
+{
+  width: 0px;
+}
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
+.flex
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid
+{
+  display: grid;
+  grid-template-columns: .8fr 1fr;
+  grid-gap: 30px;
+}
+
+.model
+{
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  position: fixed;
+  background: #fff;
+}
+
+
+
+
+.sobre_
+{
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  z-index: 3;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.90);
+}
+
+
+
+.modelo
+{
+
+  .img
+  {
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 10px auto;
+    border-radius: 50%;
+
+    img
+    {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  h1
+  {
+    color: #F0373A;
+    font-size: 24pt;
+    padding: 10px 0;
+    font-weight: 900;
+  }
+  ul
+  {
+    text-align: center;
+
+    li
+    {
+      color: #333;
+      margin: 10px 0;
+      font-weight: 900;
+      cursor: pointer;
+
+      &:hover
+        {
+          color: #F0373A;
+        }
+
+      a
+      {
+        color: #333;
+        transition: .3s;
+        font-weight: 900;
+
+        &:hover
+        {
+          color: #F0373A;
+        }
+      }
+    }
+  }
+}
+
+
+.densevolvido
+{
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+
+  p
+  {
+    color: #777;
+    a
+    {
+      color: #333;
+      font-size: 12pt;
+      font-weight: 900;
+    }
+  }
+}
+
+
+.fecha
+{
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  font-size: 14pt;
+  font-weight: 900;
+  text-align: center!important;
+}
+
+
+
+.paragrafo
+{
+  width: 600px;
+  margin: 0 auto;
+  font-size: 13pt;
+  padding: 3em 0 1em;
+  text-align: center;
+
+  h1
+  {
+    padding: 10px 0;
+    font-size: 18pt;
+    font-weight: 900;
+    text-align: center;
+  }
+  p
+  {
+    color: #fff;
+    font-size: 12pt;
+  }
+}
+
+
+
+.none
+{
+  display: none;
+}
+.block
+{
+  display: block;
+}
+
+
+
+
+
+//***************************************************************
+@media (max-width: 765px)
+{
+  body
+  {
+    overflow-y: auto;
+  }
+
+  .flex
+  {
+    // align-items: unset;
+  }
+
+  .paragrafo
+  {
+    width: 100%;
+    text-align: center;
+  }
+  .modelo
+  {
+    .img
+    {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
