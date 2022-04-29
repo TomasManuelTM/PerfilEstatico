@@ -1,11 +1,14 @@
+@import url("icons.css");
 /* fallback */
 @font-face {
-  font-family: Roboto;
+  font-family: circe;
   src: url("circe.otf");
 }
+
 body {
   margin: 0px;
   padding: 0px;
+  font-family: circe,sans-serif;
 }
 
 * {
@@ -13,13 +16,13 @@ body {
   padding: 0px;
   list-style: none;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 29px;
   font-style: normal;
   letter-spacing: 1.5px;
   text-decoration: none;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *::scrollbar {
@@ -31,15 +34,26 @@ body {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 0.8fr 1fr;
+  -ms-grid-columns: .8fr 1fr;
+      grid-template-columns: .8fr 1fr;
   grid-gap: 30px;
 }
 
@@ -72,6 +86,7 @@ body {
   margin: 10px auto;
   border-radius: 50%;
 }
+
 .modelo .img img {
   width: 100%;
   height: 100%;
@@ -79,29 +94,51 @@ body {
      object-fit: cover;
   border-radius: 50%;
 }
+
 .modelo h1 {
   color: #F0373A;
   font-size: 24pt;
   padding: 10px 0;
   font-weight: 900;
 }
+
 .modelo ul {
   text-align: center;
 }
+
 .modelo ul li {
   color: #333;
   margin: 10px 0;
   font-weight: 900;
   cursor: pointer;
 }
+
 .modelo ul li:hover {
   color: #F0373A;
 }
+
+.modelo ul li:last-child::before {
+  content: "";
+  display: block;
+  width: 4px;
+  padding: 3px;
+  margin: 10px auto;
+  background: #333;
+  border-radius: 5px;
+}
+
 .modelo ul li a {
   color: #333;
-  transition: 0.3s;
+  -webkit-transition: .3s;
+  transition: .3s;
   font-weight: 900;
+  margin: 0 10px;
 }
+
+.modelo ul li a i {
+  font-size: 14pt;
+}
+
 .modelo ul li a:hover {
   color: #F0373A;
 }
@@ -111,9 +148,11 @@ body {
   margin: 10px 0;
   text-align: center;
 }
+
 .densevolvido p {
   color: #777;
 }
+
 .densevolvido p a {
   color: #333;
   font-size: 12pt;
@@ -136,12 +175,14 @@ body {
   padding: 3em 0 1em;
   text-align: center;
 }
+
 .paragrafo h1 {
   padding: 10px 0;
   font-size: 18pt;
   font-weight: 900;
   text-align: center;
 }
+
 .paragrafo p {
   color: #fff;
   font-size: 12pt;
@@ -159,14 +200,13 @@ body {
   body {
     overflow-y: auto;
   }
-
   .paragrafo {
     width: 100%;
     text-align: center;
   }
-
   .modelo .img {
     width: 150px;
     height: 150px;
   }
-}/*# sourceMappingURL=mobile.css.map */
+}
+/*# sourceMappingURL=mobile.css.map */

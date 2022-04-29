@@ -1,12 +1,14 @@
+@import url("icons.css");
 /* fallback */
 @font-face {
-  font-family: Roboto;
+  font-family: circe;
   src: url("circe.otf");
 }
 body
 {
   margin: 0px;
   padding: 0px;
+   font-family: circe,sans-serif;
 }
 *
 {
@@ -14,13 +16,13 @@ body
     padding: 0px;
     list-style: none;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 29px;
     font-style: normal;
     letter-spacing: 1.5px;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: Roboto,sans-serif;
+   
 }
 *::scrollbar
 {
@@ -117,11 +119,32 @@ body
           color: #F0373A;
         }
 
+        &:last-child
+        {
+          &::before
+          {
+            content: "";
+            display: block;
+            width: 4px;
+            padding: 3px;
+            margin: 10px auto;
+            background: #333;
+            border-radius: 5px;
+          }
+        }
       a
       {
         color: #333;
         transition: .3s;
         font-weight: 900;
+        margin: 0 10px;
+
+        i
+        {
+          font-size: 14pt;
+        }
+
+
 
         &:hover
         {
